@@ -36,7 +36,7 @@ export default function Top10({
                                 <div className="flex flex-wrap gap-x-6 text-sm text-gray-600">
                                     <div className="flex items-center gap-1">
                                         <span className="text-gray-500 text-xs">
-                                            版本
+                                            Version
                                         </span>
                                         <span className="font-medium">
                                             {item.assetVersion || "-"}
@@ -44,7 +44,7 @@ export default function Top10({
                                     </div>
                                     <div className="flex items-center gap-1">
                                         <span className="text-gray-500 text-xs">
-                                            仓库类型
+                                            Repo Type
                                         </span>
                                         <span className="font-medium">
                                             {item.ecosystem || "-"}
@@ -52,7 +52,7 @@ export default function Top10({
                                     </div>
                                     <div className="flex items-center gap-1">
                                         <span className="text-gray-500 text-xs">
-                                            关联项目数量
+                                            Projects
                                         </span>
                                         <span className="font-medium">
                                             {item.count}
@@ -62,7 +62,7 @@ export default function Top10({
                             </div>
                         ))
                     ) : (
-                        <div className="text-gray-500 italic">暂无数据</div>
+                        <div className="text-gray-500 italic">No data</div>
                     )}
                 </div>
             </div>

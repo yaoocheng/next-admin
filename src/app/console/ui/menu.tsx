@@ -50,7 +50,7 @@ const items: MenuItem[] = [
         label: "System Management",
         icon: <SettingOutlined />,
         children: [
-            // { key: "/console/function", label: "Function Settings" },
+            { key: "/console/function", label: "Function Settings" },
             // {
             //     key: "/console/account-system",
             //     label: "Account System Integration",

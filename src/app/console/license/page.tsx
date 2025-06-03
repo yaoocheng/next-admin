@@ -1,4 +1,4 @@
-import { Card, Tag, Descriptions } from "antd";
+import { Card, Tag } from "antd";
 import { serverFetch } from "@/lib/server-fetcher";
 import dayjs from "dayjs";
 
@@ -117,33 +117,71 @@ export default async function License() {
                     </Card>
                 </div>
 
-                <Card title="License Details" className="mb-6">
-                    <Descriptions column={2} bordered>
-                        <Descriptions.Item label="App ID">
-                            {licenseInfo.detail.AppId}
-                        </Descriptions.Item>
-                        <Descriptions.Item label="License Type">
-                            <Tag color="blue">{licenseInfo.detail.Type}</Tag>
-                        </Descriptions.Item>
-                        <Descriptions.Item label="Customer Info">
-                            {licenseInfo.detail.CustomerInfo}
-                        </Descriptions.Item>
-                        <Descriptions.Item label="Company ID">
-                            {licenseInfo.detail.CompanyId}
-                        </Descriptions.Item>
-                        <Descriptions.Item label="Issue Time">
-                            {formatDate(licenseInfo.detail.IssueTime)}
-                        </Descriptions.Item>
-                        <Descriptions.Item label="Effective Time">
-                            {formatDate(licenseInfo.detail.NotBeforeTime)}
-                        </Descriptions.Item>
-                        <Descriptions.Item label="Expiry Time" span={2}>
-                            <span className="text-red-600 font-medium">
-                                {formatDate(licenseInfo.detail.ExpireTime)}
-                            </span>
-                        </Descriptions.Item>
-                    </Descriptions>
-                </Card>
+                <div className="bg-white border border-gray-200 rounded-lg p-6 mb-6">
+                    <h3 className="text-lg font-semibold text-gray-800 mb-4 border-b border-gray-200 pb-2">
+                        License Details
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="border border-gray-200 p-3 rounded">
+                            <div className="text-sm font-medium text-gray-600 mb-1">
+                                App ID
+                            </div>
+                            <div className="text-gray-800">
+                                {licenseInfo.detail?.AppId}
+                            </div>
+                        </div>
+                        <div className="border border-gray-200 p-3 rounded">
+                            <div className="text-sm font-medium text-gray-600 mb-1">
+                                License Type
+                            </div>
+                            <div>
+                                <Tag color="blue">
+                                    {licenseInfo.detail?.Type}
+                                </Tag>
+                            </div>
+                        </div>
+                        <div className="border border-gray-200 p-3 rounded">
+                            <div className="text-sm font-medium text-gray-600 mb-1">
+                                Customer Info
+                            </div>
+                            <div className="text-gray-800">
+                                {licenseInfo.detail?.CustomerInfo}
+                            </div>
+                        </div>
+                        <div className="border border-gray-200 p-3 rounded">
+                            <div className="text-sm font-medium text-gray-600 mb-1">
+                                Company ID
+                            </div>
+                            <div className="text-gray-800">
+                                {licenseInfo.detail?.CompanyId}
+                            </div>
+                        </div>
+                        <div className="border border-gray-200 p-3 rounded">
+                            <div className="text-sm font-medium text-gray-600 mb-1">
+                                Issue Time
+                            </div>
+                            <div className="text-gray-800">
+                                {formatDate(licenseInfo.detail?.IssueTime)}
+                            </div>
+                        </div>
+                        <div className="border border-gray-200 p-3 rounded">
+                            <div className="text-sm font-medium text-gray-600 mb-1">
+                                Effective Time
+                            </div>
+                            <div className="text-gray-800">
+                                {formatDate(licenseInfo.detail?.NotBeforeTime)}
+                            </div>
+                        </div>
+                        <div className="border border-gray-200 p-3 rounded md:col-span-2">
+                            <div className="text-sm font-medium text-gray-600 mb-1">
+                                Expiry Time
+                            </div>
+                            <div className="text-red-600 font-medium">
+                                {formatDate(licenseInfo.detail?.ExpireTime)}
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <Card title="Service Module Status">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
