@@ -61,7 +61,7 @@ const items: MenuItem[] = [
             //     key: "/console/private",
             //     label: "Private Source Configuration",
             // },
-            // { key: "/console/vuln", label: "Custom Vulnerabilities" },
+            { key: "/console/vuln", label: "Custom Vulnerabilities" },
             // { key: "/bus/vuln-lib", label: "Vulnerability Library Update" },
         ],
     },
